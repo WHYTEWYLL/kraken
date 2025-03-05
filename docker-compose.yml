@@ -1,0 +1,11 @@
+version: "3.8" # Specify Docker Compose version
+
+services:
+  polygon-reward-extractor:
+    image: polygon-reward-extractor:latest
+    container_name: polygon-reward
+    environment:
+      - ETH_RPC_URL=${ETH_RPC_URL} # Load from .env or shell
+    volumes:
+      - ./polygon_rewards.db:/app/polygon_rewards.db # Persist SQLite DB locally
+    restart: on-failure

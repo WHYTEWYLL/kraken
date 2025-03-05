@@ -1,9 +1,7 @@
-import os
 import sqlite3
 import unittest
-from unittest.mock import patch, MagicMock
 from datetime import datetime
-from extract_rewards import setup_database, store_rewards
+from src.extract_rewards import setup_database, store_rewards
 
 # Set up a test database
 DB_PATH = "polygon_rewards.db"

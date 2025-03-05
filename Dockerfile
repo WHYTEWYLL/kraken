@@ -13,6 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application source code
 COPY ./src src
 COPY ./abi abi
+COPY ./test test
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
